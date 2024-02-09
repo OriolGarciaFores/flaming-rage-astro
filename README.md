@@ -1,6 +1,6 @@
 # Flaming Rage - Astro
 
-Blog de mi vieja web Flaming Rgae hecha con Astro. 
+Blog de mi vieja web Flaming Rage hecha con Astro. 
 
 ## 🛠️ Stack
 
