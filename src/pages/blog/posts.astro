@@ -1,0 +1,38 @@
+---
+import { getCollection } from "astro:content";
+import BaseWeb from "../../layouts/BaseWeb.astro";
+import CardPost from "../../components/CardPost.astro";
+//import { posts } from "../../lib/posts.mjs";
+
+const allPosts = await getCollection("posts");
+---
+
+<BaseWeb title="Flaming Rage - Posts">
+    <section class="my-12">
+        <div class="container">
+            <h1 class="text-5xl">Blog</h1>
+            <p class="text-2xl my-6">
+                An example of a blog with dynamic content fetched
+            </p>
+        </div>
+    </section>
+    <section class="my-12">
+        <div class="container">
+            <p class="text-sm my-3">
+                <em>Post 1 - 6 con un total de 100 posts</em>
+            </p>
+
+            <div class="grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                {
+                    allPosts.map((post) => (
+                        <CardPost
+                            title={post.data.title}
+                            description={post.data.description}
+                            image={post.data.image}
+                        />
+                    ))
+                }
+            </div>
+        </div>
+    </section>
+</BaseWeb>

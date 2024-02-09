@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="description"
+			content="Generador de html a string json"
+		/>
+		<meta name="viewport" content="width=device-width" />
+		<title>Generador de html a string json</title>
+	</head>
+	<body>
+        
+		<main>
+            <textarea id="txt" style="width:1200px;height:100vh;border:1px solid;"></textarea>
+            <button id="button" onclick="addLink()">SAVE</button>
+            <textarea id="result" style="width:1200px;height:100vh;border:1px solid;"></textarea>
+		</main>
+        <script>
+            function addLink(){
+                var html_content = document.getElementById("txt");
+            
+
+                console.log(JSON.stringify({content: html_content.value}));
+                document.getElementById("result").innerHTML = JSON.stringify({content: html_content.value});
+            }
+        </script>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+---
+import { getCollection } from "astro:content";
+import BaseWeb from "../../layouts/BaseWeb.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("posts");
+
+  return posts.map((post) => ({
+    params: { post: post.data.title.replaceAll(" ", "-").toLowerCase() },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<BaseWeb title={"Flaming Rage - " + post.data.title}>
+  <section class="my-12">
+    <div class="container max-w-screen-md">
+      <img
+        class="h-auto w-full"
+        src={"../../../" + post.data.image.src}
+        title={post.data.image.alt}
+      />
+      <h1 class="text-5xl my-6">{post.data.title}</h1>
+      <p>{post.data.description}</p>
+      <article
+        class="prose prose-h1:text-5xl prose-h1:font-semibold prose-h3:font-semibold prose-h4:font-semibold dark:prose-invert my-6 max-w-screen-md"
+      >
+        <hr class="my-6" />
+        <Content />
+      </article>
+    </div>
+  </section>
+</BaseWeb>
