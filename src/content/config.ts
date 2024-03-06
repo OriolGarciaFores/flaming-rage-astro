@@ -6,6 +6,7 @@ const postsCollection = defineCollection({
       title: z.string(),
       publishDate: z.string(),
       description: z.string(),
+      category: z.string(),
       image: z.object({
         src: z.string(),
         alt: z.string(),
@@ -14,5 +15,6 @@ const postsCollection = defineCollection({
 });
 
 export const collections = {
-  posts: postsCollection,
+  blog: postsCollection,
+  proyectos: postsCollection
 };

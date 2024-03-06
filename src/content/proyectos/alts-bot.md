@@ -2,6 +2,7 @@
 title: Alts Bot
 publishDate: 26/01/2024
 description: Bot de discord.
+category: proyectos
 image: {
     src: "/alts.png",
     alt: "Logo bot alts"

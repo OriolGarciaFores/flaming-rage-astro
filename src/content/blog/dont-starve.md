@@ -2,6 +2,7 @@
 title: Don't Starve Together
 publishDate: 26/01/2024
 description: Apuntes y consejos basicos para empezar a jugar al DST y sobrevivir los primeros dias.
+category: blog
 image: {
     src: "/dont-starve.webp",
     alt: "Don't Starve"

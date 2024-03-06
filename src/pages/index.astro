@@ -12,7 +12,7 @@ if (posts.length > 6) {
     postList = posts;
 }*/
 
-const allPosts = await getCollection("posts");
+const allPosts = await getCollection("blog");
 let postList;
 
 if (allPosts.length > 6) {
@@ -49,6 +49,7 @@ if (allPosts.length > 6) {
                         <CardPost
                             title={post.data.title}
                             description={post.data.description}
+                            category={post.data.category}
                             image={post.data.image}
                         />
                     ))

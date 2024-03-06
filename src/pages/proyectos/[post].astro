@@ -3,7 +3,7 @@ import { getCollection } from "astro:content";
 import BaseWeb from "../../layouts/BaseWeb.astro";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("blog");
+  const posts = await getCollection("proyectos");
 
   return posts.map((post) => ({
     params: { post: post.data.title.replaceAll(" ", "-").toLowerCase() },

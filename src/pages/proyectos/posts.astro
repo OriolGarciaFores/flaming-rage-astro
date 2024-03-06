@@ -2,12 +2,11 @@
 import { getCollection } from "astro:content";
 import BaseWeb from "../../layouts/BaseWeb.astro";
 import CardPost from "../../components/CardPost.astro";
-//import { posts } from "../../lib/posts.mjs";
 
-const allPosts = await getCollection("blog");
+const allPosts = await getCollection("proyectos");
 ---
 
-<BaseWeb title="Flaming Rage - Posts">
+<BaseWeb title="Flaming Rage - Proyectos">
     <section class="my-12">
         <div class="container">
             <h1 class="text-5xl">Blog</h1>
@@ -37,3 +36,7 @@ const allPosts = await getCollection("blog");
         </div>
     </section>
 </BaseWeb>
+
+<style>
+	
+</style>
