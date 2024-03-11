@@ -1,26 +1,84 @@
 <header class="py-8">
-    <div class="container w-full flex flex-wrap justify-between">
+    <nav class="container max-w-screen-xl flex justify-between items-center">
         <a href="/" class="flex items-center !no-underline gap-2">
             <img alt="Logo" src="/alts.png" height="37" width="47" />
             <span class="font-bold text-flaming text-lg">Flaming Rage</span>
         </a>
-        <nav class="flex items-center text-flaming text-lg">
+
+        <div class="hidden md:flex md:items-center text-flaming text-lg">
             <ul class="flex gap-6">
                 <li><a href="/">Home</a></li>
                 <li><a href="/blog/posts">Blog</a></li>
                 <li><a href="/proyectos/posts">Proyectos</a></li>
                 <li><a href="/about">About</a></li>
             </ul>
-        </nav>
-    </div>
+        </div>
+
+        <div id="mobileMenu" class="md:hidden">
+            <button id="toggleBtn" class="text-white focus:outline-none">
+                <svg id="open-menu"
+                    width="26"
+                    height="21"
+                    aria-hidden="true"
+                    fill="#f8a648"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        d="M2 1.667h24m-24 8h24m-24 8h24"
+                        stroke="#f8a648"
+                        stroke-width="2.667"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+                <svg id="close-menu"
+                    class="hidden"
+                    width="20"
+                    height="20"
+                    aria-hidden="true"
+                    fill="#f8a648"
+                    xmlns="http://www.w3.org/2000/svg"
+                    >
+                    <path
+                        d="M10 10 2 2m8 8 8 8m-8-8 8-8m-8 8-8 8"
+                        stroke="#f8a648"
+                        stroke-width="2.667"
+                        stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+             </button>
+        </div>
+    </nav>
+    <nav id="mobileMenuList" class="hidden container max-w-screen-lg text-lg">
+        <ul class="flex flex-col gap-6 text-flaming mt-3">
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog/posts">Blog</a></li>
+            <li><a href="/proyectos/posts">Proyectos</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+    </nav>
+    <script>
+        function toggleMobile() {
+            document.getElementById("toggleBtn")?.addEventListener("click", 
+            function () {
+                    document.getElementById("mobileMenuList")?.classList.toggle("hidden");
+                    document.getElementById("close-menu")?.classList.toggle("hidden");
+                    document.getElementById("open-menu")?.classList.toggle("hidden");
+                });
+        }
+
+        toggleMobile();
+
+        //El usar el efecto transition, se pierde los scripts listeners.
+        document.addEventListener('astro:after-swap', toggleMobile);
+    </script>
 </header>
 
 <style>
-    nav{
+    nav {
         font-weight: 700;
     }
 
-    nav > ul a:hover {
+    .text-flaming > ul a:hover {
         -webkit-text-fill-color: #f8a648;
         text-decoration: underline;
         text-decoration-thickness: 1px;
