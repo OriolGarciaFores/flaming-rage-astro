@@ -24,11 +24,9 @@ if (allPosts.length > 6) {
 
 <BaseWeb title="Flaming Rage">
     <section class="my-12">
-        <div class="container max-w-screen-lg">
+        <div class="container max-w-screen-xl">
             <div class="items-center grid gap-24 grid-cols-1 lg:grid-cols-2">
-                <p
-                    class="lg:text-8xl md:text-left text-6xl text-center text-flaming"
-                >
+                <p class="lg:text-8xl xl:text-left text-6xl text-center text-flaming">
                     FLAMING RAGE
                 </p>
                 <img
@@ -40,10 +38,10 @@ if (allPosts.length > 6) {
             </div>
         </div>
     </section>
-    <section class="my-64">
+    <section class="lg:my-64">
         <div class="container max-w-screen-xl">
             <h2 class="text-6xl mb-16">Recientes</h2>
-            <div class="grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div class="grid gap-12 grid-cols-1 min-[630px]:grid-cols-2 lg:grid-cols-3">
                 {
                     postList.map((post) => (
                         <CardPost
