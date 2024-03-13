@@ -22,7 +22,7 @@ const allPosts = await getCollection("blog");
                 <em>Post 1 - 6 con un total de 100 posts</em>
             </p>
 
-            <div class="grid gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div class="grid gap-12 grid-cols-1 min-[630px]:grid-cols-2 lg:grid-cols-3">
                 {
                     allPosts.map((post) => (
                         <CardPost
