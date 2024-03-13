@@ -20,6 +20,7 @@ const { Content } = await post.render();
     <div class="container max-w-screen-md">
       <img
         class="h-auto w-full"
+        transition:name="image-post"
         src={"../../../" + post.data.image.src}
         title={post.data.image.alt}
       />

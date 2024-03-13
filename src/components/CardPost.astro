@@ -11,8 +11,11 @@ interface Props {
 
 const { title, description, category, image} = Astro.props;
 ---
-<a href={'/' + category +'/' + title.replaceAll(' ', '-').toLowerCase()} class="flex flex-col gap-4 reciente" transition:animate="slide">
-    <img class="rounded-lg img-post max-h-36 z-10" src={'../../../' + image.src} title={image.alt}/>
+<a href={'/' + category +'/' + title.replaceAll(' ', '-').toLowerCase()} class="flex flex-col gap-4 reciente">
+    <img class="rounded-lg img-post max-h-36 z-10"
+        transition:name="image-post"
+        src={'../../../' + image.src} 
+        title={image.alt}/>
         <div class="content">
             <h3 class="text-3xl">{ title }</h3>
             <p>{ description }</p>
