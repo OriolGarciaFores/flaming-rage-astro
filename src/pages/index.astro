@@ -39,19 +39,46 @@ if (allPosts.length > 6) {
         </div>
     </section>
     <section class="lg:my-64">
-        <div class="container max-w-screen-xl">
-            <h2 class="text-6xl mb-16">Recientes</h2>
-            <div class="grid gap-12 grid-cols-1 min-[630px]:grid-cols-2 lg:grid-cols-3">
-                {
-                    postList.map((post) => (
-                        <CardPost
-                            title={post.data.title}
-                            description={post.data.description}
-                            category={post.data.category}
-                            image={post.data.image}
-                        />
-                    ))
-                }
+        <header class="container max-w-screen-xl flex justify-center"><h2 class="text-6xl mb-16">Random topics</h2></header>
+        
+        <div class="container max-w-screen-xl md:flex md:flex-row-reverse md:gap-16">
+            <h2 class="text-6xl mb-16 self-center md:basis-1/2 text-right">TECNOLOGIAS</h2>
+            <div class="relative m-auto max-w-4xl md:basis-1/2">
+                <img alt="Colorful Image" 
+                height="500" 
+                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80" 
+                width="500" 
+                class="mx-auto w-full bg-gray-500 rounded-lg shadow-lg" 
+                decoding="async" 
+                loading="lazy">
+            </div>
+        </div>
+    </section>
+    <section class="lg:my-64">
+        <div class="container max-w-screen-xl md:flex md:flex-row md:gap-16">
+            <h2 class="text-6xl mb-16 self-center md:basis-1/2">GUIAS</h2>
+            <div class="relative m-auto max-w-4xl md:basis-1/2">
+                <img alt="Colorful Image" 
+                height="500" 
+                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80" 
+                width="500" 
+                class="mx-auto w-full bg-gray-500 rounded-lg shadow-lg" 
+                decoding="async" 
+                loading="lazy">
+            </div>
+        </div>
+    </section>
+    <section class="lg:my-64">
+        <div class="container max-w-screen-xl md:flex md:flex-row-reverse md:gap-16">
+            <h2 class="text-6xl mb-16 self-center md:basis-1/2 text-right">PROYECTOS</h2>
+            <div class="relative m-auto max-w-4xl md:basis-1/2">
+                <img alt="Colorful Image" 
+                height="500" 
+                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=2070&amp;q=80" 
+                width="500" 
+                class="mx-auto w-full bg-gray-500 rounded-lg shadow-lg" 
+                decoding="async" 
+                loading="lazy">
             </div>
         </div>
     </section>
