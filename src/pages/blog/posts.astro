@@ -2,9 +2,20 @@
 import { getCollection } from "astro:content";
 import BaseWeb from "../../layouts/BaseWeb.astro";
 import CardPost from "../../components/CardPost.astro";
-//import { posts } from "../../lib/posts.mjs";
 
 const allPosts = await getCollection("blog");
+
+
+allPosts.sort((a, b) => {
+  const dateA = a.data.publishDate.split('/');
+  const dateB = b.data.publishDate.split('/');
+
+  const formattedDateA = new Date(`${dateA[2]}-${dateA[1]}-${dateA[0]}`);
+  const formattedDateB = new Date(`${dateB[2]}-${dateB[1]}-${dateB[0]}`);
+
+  return formattedDateB.getTime() - formattedDateA.getTime();
+});
+
 ---
 
 <BaseWeb title="Flaming Rage - Posts">
