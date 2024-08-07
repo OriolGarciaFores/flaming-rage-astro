@@ -1,8 +1,8 @@
 ---
 title: Alts Bot
-publishDate: 26/01/2024
+publishDate: 07/08/2024
 description: Bot de discord.
-category: proyectos
+category: blog
 image: {
     src: "/alts.webp",
     alt: "Logo bot alts"
@@ -48,3 +48,6 @@ Arranque con:
 ```
 npm start
 ```
+
+
+![Another local image](/alts.webp)
