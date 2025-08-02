@@ -48,6 +48,3 @@ Arranque con:
 ```
 npm start
 ```
-
-
-![Another local image](/alts.webp)
